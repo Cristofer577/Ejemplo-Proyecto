@@ -1,12 +1,13 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TercerComponente } from './components/tercer-componente/tercer-componente';
+import { CuartoComponente } from './components/cuarto-componente/cuarto-componente';
 
 @Component({
-  imports: [RouterOutlet],
   selector: 'app-root',
-  styleUrl: './app.css',
+  standalone: true,
+  imports: [RouterOutlet, TercerComponente, CuartoComponente],
   templateUrl: './app.html',
+  styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('app_tres');
-}
+export class App { }
